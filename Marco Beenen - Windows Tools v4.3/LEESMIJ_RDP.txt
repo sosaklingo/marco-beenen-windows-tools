@@ -1,0 +1,35 @@
+RDP WRAPPER DIAGNOSE VOOR WINDOWS 11 PRO
+======================================
+
+Onderdeel van Marco Beenen - Windows Tools v4.3
+
+Inhoud:
+  START_RDP_CONTROLE.cmd        - dubbelklik om de controle te starten
+  RDP_Diagnose_Windows11.ps1   - de PowerShell-controle zelf
+
+1. Pak de ZIP eerst volledig uit in een eigen map.
+2. Kies in START - Windows Tools.bat voor Diagnose en tests en daarna
+   RDP Wrapper-diagnose, of dubbelklik op START_RDP_CONTROLE.cmd.
+3. Wacht tot de controle klaar is. Het venster blijft open.
+4. In Bureaublad\Computerdiagnose rapporten verschijnt
+   RDP_Rapport_<computernaam>_<datum>.txt.
+5. Bewaar het rapport. Verwijder privégegevens voordat u het met iemand deelt.
+
+Optioneel: als je RDP Wrapper in een andere map hebt staan,
+kun je die map slepen naar START_RDP_CONTROLE.cmd.
+De controle kijkt dan ook in die map.
+
+BELANGRIJK
+- Het script leest alleen informatie; er wordt niets geïnstalleerd,
+  gestart, gestopt, gedownload of veranderd.
+- Het controleert de TermService-registryverwijzing, termsrv.dll-versie,
+  de RDP-instellingen, de lokale luisterpoort en vindbare RDP Wrapper-files.
+- Bestaat er een exacte rdpwrap.ini-sectie voor jouw versie? Dan wordt dit
+  gemeld, maar dat GARANDEERT nog geen gelijktijdige aanmeldingen.
+- Om twee sessies te bewijzen moet je met twee verschillende accounts
+  daadwerkelijk tegelijk via RDP inloggen, met toestemming voor beide.
+- Windows 11 Pro ondersteunt officieel geen meerdere interactieve RDP-
+  gebruikerssessies. Voor officieel ondersteunde meergebruikersoplossingen
+  heb je doorgaans een geschikte Server/RDS- of virtuele desktopoplossing nodig.
+- Zet RDP-poort 3389 niet rechtstreeks open naar het internet. Gebruik
+  liever een beveiligd VPN of een andere beheerde veilige toegangsmethode.

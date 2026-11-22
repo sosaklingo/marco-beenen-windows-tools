@@ -1,0 +1,953 @@
+HANDLEIDING MARCO BEENEN - WINDOWS TOOLS
+========================================
+
+Compleet test-, diagnose- en onderhoudspakket v4.3
+Gemaakt door Marco Beenen
+
+Map: Marco Beenen - Windows Tools
+Rapporten: Bureaublad\Computerdiagnose rapporten
+
+Met deze 49 BAT-bestanden en de aanvullende RDP Wrapper-diagnose kunt u Windows,
+hardware, opslag, netwerk, wifi, opstartprogramma's, accu, energiegebruik, drivers,
+Remote Desktop en foutmeldingen controleren.
+De meeste controles zijn alleen-lezen. Reparatie, updates, herstelpunten en
+opschoning worden uitsluitend gestart nadat u daar zelf toestemming voor geeft.
+
+
+Wat is nieuw in versie 4.3
+-------------------------
+
+- Een alleen-lezen RDP Wrapper-diagnose voor Windows 11, inclusief rapport
+- Een compact hoofdmenu met zes duidelijke submenu's
+- Een ingebouwde zelftest voor bestanden, menuverwijzingen en Windows-onderdelen
+- Directe snelkoppelingen naar Apparaatbeheer, Windows Update, Opstart-apps,
+  Windows-probleemoplossers, Taakbeheer, Windows-beveiliging en
+  Netwerkverbindingen
+- Een herstelpuntenoverzicht en een directe koppeling naar Windows Back-up
+- Betere foutcodes, invoercontrole en bevestigingen in meerdere hulpmiddelen
+- Een submenu bij Windows-herstelpunt maken om ook Systeembeveiliging te openen
+- Een veilige uitschakeltimer waarin u zelf het aantal minuten kunt invoeren
+- Een alleen-lezen rapport voor TPM, Secure Boot en BitLocker
+- Een back-upfunctie voor externe driverpakketten
+- Een ingebouwd Windows-prestatierapport via Performance Monitor
+- Een centraal crash- en blauwschermrapport over de laatste 30 dagen
+- Alle gemaakte rapporten worden in een centrale rapportenmap bewaard
+- Een uitgebreide SSD/HDD-controle met SMART- en slijtagegegevens
+- Een wifi-rapport met verbindingsgeschiedenis en foutmeldingen
+- Een overzicht van opstartprogramma's, aanmeldtaken en automatische services
+- Een laptopaccu- en energiecontrole met capaciteitsberekening
+- Een volledige Windows-geheugentest die u bewust zelf kunt starten
+- Een interactieve checklist voor beeldscherm, geluid, camera, toetsen en poorten
+- Een app-updater via Windows Package Manager (winget)
+- Windows-reparatie met DISM en SFC
+- Een losse snelle of volledige Microsoft Defender-scan
+- Een hulpmiddel om bewust een Windows-herstelpunt te maken
+- Een snelle schijfgezondheidscontrole en uitgebreid systeeminformatierapport
+- Veilige opschoning van oude persoonlijke tijdelijke bestanden
+- Windows Update bewust in- of uitschakelen via het hoofdmenu
+- Een extra beveiligde formatter voor fysieke Disk 2, met meerdere controles
+- Het klassieke Windows-geluidsmenu direct openen op het tabblad Afspelen
+- Consistente makersinformatie in het pakket
+- Gericht vervolgadvies na de volledige computerdiagnose
+
+
+Voordat u begint
+----------------
+
+1. Sla open documenten en ander werk op.
+2. Sluit programma's die u niet nodig hebt.
+3. Sluit bij een laptop de oplader aan.
+4. Klik bij een melding van Gebruikersaccountbeheer op Ja als u de test zelf uit
+   de map Marco Beenen - Windows Tools hebt gestart.
+5. Verwijder geen bestanden en wijzig geen instellingen tijdens een diagnose.
+6. Start nooit twee zware controles tegelijk.
+7. Een uitslag GOED sluit een verborgen of soms optredend defect niet volledig uit.
+
+
+Snel beginnen
+-------------
+
+Bestand:
+START - Windows Tools.bat
+
+Dit is het vaste startpunt. Het hoofdmenu verdeelt alles in Diagnose en tests,
+Onderhoud en beveiliging, Windows-hulpmiddelen en apparaten, Rapporten en
+informatie, Overig en energie en een apart geavanceerd menu.
+
+Aanbevolen eerste controle:
+
+1. Kies in het hoofdmenu 1 voor Diagnose en tests en daarna opnieuw 1 voor de
+   volledige computerdiagnose.
+2. Lees de samenvatting en bewaar het gemaakte rapport.
+3. Voer alleen de aanbevolen vervolgtest uit wanneer een onderdeel aandacht vraagt.
+4. Kies in het hoofdmenu 4 en daarna 1 om de centrale rapportenmap te openen.
+5. Kies in het hoofdmenu 4 en daarna 2 om deze PDF-handleiding te openen.
+
+
+Betekenis van de uitslagen
+--------------------------
+
+GOED
+De uitgevoerde controle heeft geen directe fout gevonden.
+
+AANDACHT
+Er is iets gevonden dat u moet bekijken, bijvoorbeeld weinig vrije ruimte,
+ontbrekende updates, een onbekende schijfstatus of een apparaatfout.
+
+PROBLEEM
+Een controle kon niet worden afgerond of er is een duidelijke fout gemeld.
+Bewaar het rapport en maak bij schijfproblemen eerst een back-up.
+
+INFO
+Dit is informatie en niet automatisch een probleem. Geen accu op een desktop of
+geen beschikbare temperatuursensor is bijvoorbeeld normaal.
+
+OVERGESLAGEN
+Dit onderdeel is in de handmatige checklist niet getest.
+
+
+1. Volledige automatische computerdiagnose
+------------------------------------------
+
+Bestand:
+Volledige Computerdiagnose - Marco Beenen.bat
+
+Dit is de belangrijkste totaalcontrole. De test kan ongeveer 10 tot 30 minuten
+duren en controleert:
+
+- Computer-, Windows- en BIOS-gegevens
+- CPU-herkenning en een korte rekencontrole
+- Aanwezig RAM en een korte test van 256 MB geheugen
+- SSD/HDD-gezondheid, SMART-gegevens en vrije schijfruimte
+- Bestandssysteem van de Windows-schijf met CHKDSK /scan
+- Videokaart, videodriver en DirectX
+- Drivers, apparaten en USB-foutcodes
+- Netwerkadapter, router, DNS en internetverbinding
+- Gezondheid van de Windows-installatie met DISM
+- Windows-systeembestanden met SFC /verifyonly
+- Microsoft Defender-status en een snelle virusscan
+- Kritieke Windows-fouten van de laatste 7 dagen
+- Accu-informatie en beschikbare temperatuursensoren
+- Audio-, camera- en microfoonapparaten
+- Beschikbare Windows-updates
+
+De diagnose repareert, verwijdert of installeert niets. Aan het einde verschijnt
+gericht advies voor schijf-, driver-, netwerk-, Windows- of temperatuurmeldingen.
+U kunt daarna zelf kiezen of Windows Geheugendiagnose wordt geopend.
+
+Gemaakte rapporten:
+
+- Computer_test_DATUM_TIJD.txt
+- DirectX_rapport_DATUM_TIJD.txt
+- Bij een laptop mogelijk: Accu_rapport_DATUM_TIJD.html
+
+
+2. Snelle hardwarecontrole
+--------------------------
+
+Bestand:
+test_cpu_gpu_geheugen_schijf.bat
+
+Controleert snel de CPU, 128 MB RAM, de Windows-schijf en GPU-apparaatstatus.
+Gebruik deze als snelle hercontrole, niet als vervanging van de volledige diagnose.
+
+Gemaakt rapport:
+
+Snelle_hardwarecontrole_DATUM_TIJD.txt
+
+
+3. Uitgebreide schijfcontrole
+-----------------------------
+
+Bestand:
+uitgebreide_schijfcontrole.bat
+
+Controleert alle zichtbare fysieke schijven en volumes op:
+
+- SSD/HDD-type, bus en grootte
+- Gezondheids- en operationele status
+- Beschikbare SMART-waarden
+- Temperatuur, slijtage en bedrijfsuren indien ondersteund
+- Totaal gemelde lees- en schrijffouten indien ondersteund
+- Vrije ruimte per station
+- Bestandssysteem van de Windows-schijf met CHKDSK /scan
+
+De controle schrijft geen testgegevens naar de schijf. Niet iedere SSD, USB-schijf
+of opslagcontroller geeft SMART-waarden aan Windows door. Onbekend betekent daarom
+niet automatisch defect.
+
+Gemaakt rapport:
+
+Uitgebreide_schijfcontrole_DATUM_TIJD.txt
+
+LET OP: maak onmiddellijk een back-up bij Predictive Failure, een ongezonde status
+of terugkerende lees- en schrijffouten.
+
+
+4. Volledige geheugentest
+-------------------------
+
+Bestand:
+volledige_geheugentest_openen.bat
+
+Opent Windows Geheugendiagnose. Deze test controleert veel meer RAM dan de korte
+BAT-controles, maar werkt pas na een herstart. Windows laat zelf kiezen of u nu of
+bij de volgende start wilt testen.
+
+Sla altijd eerst uw werk op. Voor een nog grondigere controle kunt u MemTest86
+vanaf een USB-stick gebruiken.
+
+
+5. Netwerkstabiliteitstest
+--------------------------
+
+Bestand:
+netwerk_stabiliteitstest.bat
+
+Controleert de actieve netwerkadapter, router, DNS en internet met meerdere pings.
+Er worden 40 pings uitgevoerd naar de router, Microsoft, Cloudflare en Google DNS.
+
+Beoordeling:
+
+- 0 procent pakketverlies: goed
+- Tot en met 5 procent verlies: aandacht nodig
+- Meer dan 5 procent verlies: duidelijk probleem
+- Grote pingverschillen kunnen haperingen bij gamen, bellen of streamen geven
+
+Gemaakt rapport:
+
+Netwerk_stabiliteitstest_DATUM_TIJD.txt
+
+
+6. Wifi-rapport
+---------------
+
+Bestand:
+wifi_rapport_maken.bat
+
+Maakt een overzicht van de huidige wifi-verbinding, wifi-driver, recente
+wifi-waarschuwingen en verbindingsgeschiedenis over de afgelopen 7 dagen.
+
+Gemaakte rapporten:
+
+- Wifi_samenvatting_DATUM_TIJD.txt
+- Wifi_rapport_DATUM_TIJD.html
+
+Open het HTML-rapport en kijk vooral naar rode sessies, veel verbrekingen en
+terugkerende foutredenen. Vergelijk wifi eventueel met een netwerkkabel.
+
+
+7. Opstartprogramma's controleren
+---------------------------------
+
+Bestand:
+opstartprogrammas_controle.bat
+
+Maakt een alleen-lezen overzicht van:
+
+- Automatische opstartopdrachten
+- Geplande taken die bij aanmelden starten
+- Het aantal automatische Windows-services
+
+Er wordt niets uitgeschakeld. Een hoog aantal is niet automatisch fout. Schakel
+alleen software uit die u herkent en niet direct nodig hebt. Laat antivirus,
+touchpad-, audio-, videokaart-, back-up- en hardwareprogramma's staan bij twijfel.
+
+Gemaakt rapport:
+
+Opstartprogrammas_DATUM_TIJD.txt
+
+
+8. Laptopaccu en energie
+------------------------
+
+Bestand:
+laptop_accu_en_energiecontrole.bat
+
+Controleert acculading, accustatus, beschikbare capaciteit en slaapstanden. De
+tool probeert de volle capaciteit met de ontwerpcapaciteit te vergelijken en laat
+Windows daarna 30 seconden het energiegebruik meten.
+
+Richtlijn voor accugezondheid:
+
+- Ongeveer 80 procent of hoger: meestal nog goed bruikbaar
+- Ongeveer 60 tot 80 procent: merkbare slijtage mogelijk
+- Lager dan ongeveer 60 procent: vervanging kan zinvol zijn
+
+Gemaakte rapporten:
+
+- Laptop_accu_energie_DATUM_TIJD.txt
+- Accu_rapport_DATUM_TIJD.html
+- Energie_rapport_DATUM_TIJD.html
+
+Op een desktop zonder accu verschijnt alleen INFO. Dat is normaal.
+
+
+9. Temperatuur en stresstest
+----------------------------
+
+Bestand:
+temperatuur_en_stresstest_handleiding.bat
+
+Dit bestand start bewust geen zware belasting. Het leest CPU, GPU en hoeveelheid
+RAM uit en maakt een persoonlijke handleiding voor HWiNFO64 of HWMonitor, OCCT,
+Cinebench, 3DMark, Unigine en MemTest86.
+
+Gemaakt rapport:
+
+Temperatuur_en_stresstest_handleiding_DATUM_TIJD.txt
+
+Veiligheidsregels:
+
+- Houd temperaturen tijdens een stresstest in beeld
+- Stop bij vastlopen, vreemde geluiden, brandlucht of beeldfouten
+- Let extra op boven 90 graden Celsius
+- Stop rond 95 graden Celsius of hoger
+- Test CPU en GPU eerst afzonderlijk gedurende 10 tot 15 minuten
+- Test CPU en GPU niet tegelijk bij twijfel aan koeling of voeding
+
+
+10. Handmatige hardwarechecklist
+--------------------------------
+
+Bestand:
+handmatige_hardware_checklist.bat
+
+Begeleidt u interactief bij het testen van:
+
+- Beeldscherm
+- Speakers en hoofdtelefoon
+- Microfoon
+- Camera
+- Toetsenbord
+- Muis of touchpad
+- Alle USB-poorten
+- Wifi
+- Bluetooth
+- Ventilatoren en vreemde geluiden
+
+Kies per onderdeel G voor goed, P voor probleem of O voor overgeslagen. Bij een
+probleem kunt u een korte omschrijving opslaan.
+
+Gemaakt rapport:
+
+Handmatige_hardwarechecklist_DATUM_TIJD.txt
+
+
+11. Betrouwbaarheid en vastlopers
+---------------------------------
+
+Bestand:
+open_betrouwbaarheidsgeschiedenis.bat
+
+Opent de Betrouwbaarheidsgeschiedenis. Let vooral op rode kruisen, hardwarefouten,
+onverwachte afsluitingen en dezelfde fout die op meerdere dagen terugkomt.
+
+
+12. Windows-logboeken
+---------------------
+
+Bestand:
+open_logboeken.bat
+
+Opent Logboeken. Kijk bij Windows-logboeken > Systeem en Windows-logboeken >
+Toepassing. Zoek vooral naar meldingen op het exacte tijdstip van een probleem.
+Noteer de bron en gebeurtenis-id. Niet iedere waarschuwing is een defect.
+
+
+13. Prestaties tijdens gebruik
+------------------------------
+
+Bestand:
+open_resource_monitor.bat
+
+Opent Broncontrole. Hiermee ziet u welk programma veel CPU, geheugen, schijf of
+netwerk gebruikt. Laat Broncontrole open terwijl u het probleem nabootst.
+
+
+14. Computerbeheer en apparaten
+-------------------------------
+
+Bestand:
+open_computer_management.bat
+
+Opent Computerbeheer met onder andere Apparaatbeheer, Schijfbeheer, Logboeken en
+services. Controleer in Apparaatbeheer op gele waarschuwingstekens.
+
+
+15. Systeembeheer
+-----------------
+
+Bestand:
+open_systeembeheer.bat
+
+Opent de verzameling geavanceerde Windows-hulpprogramma's. Het bestand voert zelf
+geen test uit.
+
+
+16. Lokaal beveiligingsbeleid
+-----------------------------
+
+Bestand:
+open_local_security_policy.bat
+
+Opent het lokale beveiligingsbeleid als de Windows-editie dat ondersteunt. Dit is
+geen veiligheidsscan. Wijzig niets zonder te weten wat het gevolg is.
+
+
+17. Opdrachtprompt als administrator
+------------------------------------
+
+Bestand:
+open_command_prompt_admin.bat
+
+Opent een opdrachtprompt met administratorrechten. Dit test niets. Voer alleen
+opdrachten uit die u kent of uit een betrouwbare handleiding hebt gekregen.
+
+
+18. Herstelstation maken
+------------------------
+
+Bestand:
+open_recovery_drive.bat
+
+Opent de Windows-wizard voor een USB-herstelstation. Dit is geen test, maar kan
+helpen wanneer Windows later niet meer start.
+
+LET OP: de geselecteerde USB-stick kan volledig worden gewist. Controleer de
+gekozen stick zorgvuldig en bewaar bestaande bestanden eerst ergens anders.
+
+
+19. Rapportenmap openen
+-----------------------
+
+Bestand:
+open_rapportenmap.bat
+
+Maakt en opent deze map:
+
+Bureaublad\Computerdiagnose rapporten
+
+Alle nieuwe tekst- en HTML-rapporten van het pakket worden hier bewaard. Sorteer
+op datum om de nieuwste test te vinden.
+
+
+20. Automatisch uitschakelen
+----------------------------
+
+Bestand:
+uitschakelen_na_10_minuten.bat
+
+Plant het volledig uitschakelen van de computer over 10 minuten. Dit is geen
+testbestand. Sla eerst al uw werk op.
+
+Bestand:
+uitschakelen_na_eigen_aantal_minuten.bat
+
+Vraagt na hoeveel hele minuten de computer moet uitschakelen. Alleen een waarde
+van 1 tot en met 5256000 minuten wordt geaccepteerd. De gekozen tijd wordt eerst
+getoond en moet daarna met J worden bevestigd. Sla vooraf al uw werk op.
+
+Bestand:
+annuleer_uitschakelen.bat
+
+Annuleert de geplande afsluiting zolang de ingestelde tijd nog niet voorbij is.
+
+
+21. Apps automatisch updaten
+----------------------------
+
+Bestand:
+apps_automatisch_updaten.bat
+
+Controleert met Windows Package Manager (winget) welke geïnstalleerde apps een
+update hebben en kan daarna alle beschikbare app-updates installeren.
+
+Sluit programma's en bewaar open documenten voordat u deze tool start. Sommige
+updates kunnen administratorrechten vragen. Niet elke app ondersteunt winget;
+programma's met een eigen updater moeten soms nog handmatig worden bijgewerkt.
+
+
+22. Windows repareren
+---------------------
+
+Bestand:
+windows_repareren.bat
+
+Voert DISM /RestoreHealth en daarna SFC /scannow uit. Hiermee kan Windows de
+componentopslag en beschadigde systeembestanden controleren en waar mogelijk
+repareren. De controle kan 15 tot 60 minuten duren en vraagt administratorrechten.
+Onderbreek de computer niet tijdens de reparatie.
+
+Gemaakt rapport:
+
+Windows_reparatie_DATUM_TIJD.txt
+
+
+23. Microsoft Defender-scan
+---------------------------
+
+Bestand:
+windows_defender_scan.bat
+
+Laat u kiezen tussen een snelle en een volledige Microsoft Defender-scan. Eerst
+worden de virusdefinities bijgewerkt. Een volledige scan kan meerdere uren duren.
+Bij gebruik van andere antivirussoftware kan deze functie niet beschikbaar zijn.
+
+Gemaakt rapport:
+
+Defender_scan_DATUM_TIJD.txt
+
+
+24. Windows-herstelpunten en Systeembeveiliging
+----------------------------------------------
+
+Kies in het hoofdmenu 2 (Onderhoud en beveiliging) en daarna 4. In het submenu
+maakt u een herstelpunt, opent u Systeembeveiliging, bewaart u een overzicht van
+de aanwezige herstelpunten of opent u Windows Back-up.
+
+Bestand:
+herstelpunt_maken.bat
+
+Maakt na bevestiging een Windows-herstelpunt en schakelt Systeembeveiliging voor
+de Windows-schijf zo nodig in. De normale limiet van een herstelpunt per 24 uur
+wordt tijdens deze actie tijdelijk opgeheven en daarna teruggezet. De tool
+controleert of Windows een nieuw herstelpunt heeft toegevoegd.
+
+Bestand:
+open_systeembeveiliging.bat
+
+Opent Systeemeigenschappen op het tabblad Systeembeveiliging. Hier kunt u via
+Maken handmatig een herstelpunt maken, via Configureren de beveiliging beheren
+en via Systeemherstel een bestaand herstelpunt kiezen. Het openen van dit venster
+maakt zelf geen herstelpunt en start geen herstelactie. Windows kan om
+administratorrechten vragen.
+
+Een herstelpunt is geen vervanging voor een back-up van persoonlijke bestanden.
+
+Bestand:
+herstelpunten_overzicht_opslaan.bat
+
+Leest de aanwezige herstelpunten uit en bewaart nummer, datum, naam en type in de
+centrale rapportenmap. Dit kopieert de herstelpunten zelf niet.
+
+Bestand:
+open_windows_backup.bat
+
+Opent de Windows-instellingen voor back-up van bestanden, apps en instellingen.
+
+
+25. Schijfgezondheid snel controleren
+--------------------------------------
+
+Bestand:
+schijfgezondheid_controleren.bat
+
+Toont snel de Windows-gezondheidsstatus, beschikbare SMART-waarden en vrije ruimte
+van de gevonden schijven. Er wordt niets gewijzigd. Gebruik bij waarschuwingen de
+uitgebreide schijfcontrole en maak bij vermoedelijke schade eerst een back-up.
+
+Gemaakt rapport:
+
+Schijfgezondheid_DATUM_TIJD.txt
+
+
+26. Systeeminformatie opslaan
+-----------------------------
+
+Bestand:
+systeeminformatie_opslaan.bat
+
+Maakt een tekstrapport van computer- en Windows-gegevens, BIOS, processor,
+geheugen, videokaart, schijven, netwerkadapters en geïnstalleerde drivers. Dit is
+nuttig als nulmeting of om informatie bij een probleem door te geven.
+
+Gemaakt rapport:
+
+Systeeminformatie_DATUM_TIJD.txt
+
+
+27. Veilige Windows-opschoning
+------------------------------
+
+Bestand:
+veilige_windows_opschoning.bat
+
+Verwijdert na bevestiging uitsluitend bestanden ouder dan 7 dagen uit de
+persoonlijke tijdelijke Windows-map. Downloads, Documenten, Afbeeldingen,
+browsergegevens en de Prullenbak blijven ongemoeid. Bestanden die in gebruik zijn
+worden overgeslagen. Daarna kunt u desgewenst Windows Opslaginstellingen openen.
+
+
+28. Windows Update in- of uitschakelen
+---------------------------------------
+
+Bestand:
+Windows_Updates_AAN.bat
+
+Schakelt Windows Update weer in door het ingestelde NoAutoUpdate-beleid te
+verwijderen en de services Windows Update en Update Orchestrator weer te activeren.
+Start Windows daarna opnieuw op en controleer via Instellingen > Windows Update of
+updates weer beschikbaar zijn.
+
+Bestand:
+Windows_Updates_UIT.bat
+
+Schakelt automatische Windows Update uit via lokaal beleid en de services Windows
+Update en Update Orchestrator. Vanuit het hoofdmenu wordt eerst extra bevestiging
+gevraagd. Start Windows opnieuw op om de wijziging volledig toe te passen.
+
+LET OP: zolang Windows Update is uitgeschakeld, worden belangrijke beveiligings-
+en kwaliteitsupdates niet automatisch gedownload of geïnstalleerd. Gebruik deze
+stand alleen tijdelijk en bewaar Windows_Updates_AAN.bat om updates later weer in
+te schakelen. Windows kan sommige service-instellingen bij onderhoud zelf herstellen.
+
+
+29. Fysieke Disk 2 formatteren
+------------------------------
+
+Bestand:
+format-disk-2.bat
+
+Gebruik dit bestand niet zomaar. Gebruik format-disk-2.bat alleen wanneer u
+ervaring hebt met DiskPart en precies weet welke fysieke schijf Windows als Disk 2
+aanduidt. Disk 2 is niet hetzelfde als station D:. Alle partities en bestanden op
+Disk 2 worden verwijderd. Weet u niet volledig zeker dat dit de juiste schijf is?
+Sluit het programma dan zonder verder te gaan.
+
+Wist fysieke Disk 2 volledig, maakt een nieuwe primaire partitie en formatteert
+deze als NTFS, exFAT of FAT32. U kiest zelf CLEAN of CLEAN ALL, GPT of MBR,
+snel of volledig formatteren, clustergrootte, volumenaam en stationsletter.
+FAT32 is alleen beschikbaar wanneer Disk 2 maximaal 32 GB groot is; kies voor
+grotere schijven NTFS of exFAT.
+
+De tool toont vooraf model, capaciteit, volumes en partities. Hij weigert een
+opstart-, systeem- of Windows-schijf en controleert dit vlak voor het wissen
+opnieuw. De bewerking start alleen na meerdere waarschuwingen en nadat u exact
+FORMATTEER DISK 2 hebt ingevoerd. Na afloop controleert de tool de partitiestijl,
+het bestandssysteem en de volumenaam voordat hij meldt dat de actie is geslaagd.
+
+LET OP: gebruik format-disk-2.bat alleen wanneer u ervaring hebt met DiskPart en
+precies weet welke fysieke schijf Windows als Disk 2 aanduidt. Disk 2 is niet
+hetzelfde als station D:. Alle partities en bestanden op Disk 2 gaan verloren.
+Weet u niet volledig zeker dat dit de juiste schijf is? Sluit het programma dan
+zonder verder te gaan.
+Schijfnummers kunnen veranderen wanneer u schijven aansluit, verwijdert of Windows
+opnieuw start. Controleer daarom altijd model, capaciteit en bestaande volumes.
+Maak vooraf een back-up en koppel andere externe schijven bij voorkeur tijdelijk
+los. Gebruik deze functie nooit als u niet volledig zeker weet welke schijf Disk 2 is.
+
+
+30. Klassiek geluidsmenu openen
+-------------------------------
+
+Bestand:
+open_geluidsapparaten.bat
+
+Opent het klassieke Windows-venster Geluid direct op het tabblad Afspelen. Hier
+ziet u alle beschikbare afspeelapparaten, zoals luidsprekers, hoofdtelefoons en
+digitale audio-uitgangen. U kunt het standaardapparaat herkennen, eigenschappen
+openen en zien of een apparaat is losgekoppeld of uitgeschakeld.
+
+Het bestand verandert zelf geen geluidsinstellingen. Pas het standaardapparaat of
+andere eigenschappen alleen aan wanneer u weet welk apparaat u wilt gebruiken.
+
+
+31. TPM, Secure Boot en BitLocker controleren
+----------------------------------------------
+
+Bestand:
+beveiligingsstatus_controleren.bat
+
+Maakt een alleen-lezen overzicht van de TPM-status, Secure Boot en de BitLocker-
+of apparaatversleutelingsstatus van alle gevonden stations. De tool vraagt om
+administratorrechten om alle beveiligingsinformatie te kunnen lezen, maar schakelt
+niets in of uit en wijzigt geen sleutels of beveiligingsinstellingen.
+
+Gemaakt rapport:
+
+Beveiligingsstatus_DATUM_TIJD.txt
+
+Controleer vooral of TPM aanwezig en gereed is, of Secure Boot is ingeschakeld en
+of de Windows-schijf daadwerkelijk wordt beschermd. Niet beschikbaar kan ook
+betekenen dat de hardware, Windows-editie of BIOS/UEFI-modus de functie niet ondersteunt.
+
+
+32. Back-up van externe drivers maken
+--------------------------------------
+
+Bestand:
+drivers_backup_maken.bat
+
+Exporteert de externe driverpakketten uit het Windows-driverarchief met PnPUtil.
+Er worden geen drivers verwijderd, bijgewerkt of geïnstalleerd. De gemaakte map
+kan honderden megabytes of meer groot worden en bevat ook een logbestand.
+
+Gemaakte map:
+
+Bureaublad\Driverback-up_DATUM_TIJD
+
+Dit is een extra herstelhulpmiddel en geen volledige computerback-up. Bewaar de
+map bij voorkeur ook op een externe schijf. Het terugplaatsen van een driver moet
+later bewust en handmatig gebeuren.
+
+
+33. Windows-prestatierapport
+----------------------------
+
+Bestand:
+windows_prestatierapport_openen.bat
+
+Start het ingebouwde Performance Monitor-rapport van Windows. Windows verzamelt
+ongeveer 60 seconden gegevens en toont daarna informatie over processor, geheugen,
+schijven, netwerk, services en systeemreacties. Er worden geen instellingen gewijzigd.
+
+Het rapport wordt door Performance Monitor zelf getoond en staat daarom niet als
+los tekstbestand in de centrale rapportenmap. Laat het venster open totdat de
+gegevensverzameling en rapportopbouw zijn voltooid.
+
+
+34. Crash- en blauwschermrapport
+--------------------------------
+
+Bestand:
+crash_en_blauwschermrapport_maken.bat
+
+Verzamelt over de laatste 30 dagen informatie over onverwachte herstarts,
+blauwschermmeldingen, toepassingscrashes en vastlopers. Ook wordt genoteerd welke
+Windows- en toepassingsdumpbestanden aanwezig zijn. De dumpbestanden zelf worden
+niet geopend, gewijzigd of gekopieerd.
+
+Gemaakt rapport:
+
+Crash_en_blauwscherm_DATUM_TIJD.txt
+
+Dit rapport helpt de datum, bron, gebeurtenis-id en foutmelding bij een probleem
+te vinden. Voor diepgaande analyse van een dumpbestand blijft een programma zoals
+WinDbg of hulp van een deskundige nodig.
+
+
+35. Apparaatbeheer direct openen
+---------------------------------
+
+Bestand:
+open_apparaatbeheer.bat
+
+Opent Apparaatbeheer rechtstreeks. Controleer hier vooral apparaten met een geel
+waarschuwingsteken. Verwijder of wijzig een driver alleen als u weet waarom.
+
+
+36. Windows Update en Opstart-apps openen
+-----------------------------------------
+
+Bestanden:
+open_windows_update.bat
+open_opstartapps.bat
+
+Openen rechtstreeks de bijbehorende pagina in Windows-instellingen. Deze
+bestanden wijzigen zelf geen instellingen.
+
+
+37. Windows Back-up openen
+--------------------------
+
+Bestand:
+open_windows_backup.bat
+
+Opent de Windows-instellingen voor back-up. Welke onderdelen beschikbaar zijn,
+hangt af van de Windows-versie en het gebruikte Microsoft-account.
+
+
+38. Herstelpuntenoverzicht opslaan
+-----------------------------------
+
+Bestand:
+herstelpunten_overzicht_opslaan.bat
+
+Maakt een leesbaar tekstoverzicht van alle herstelpunten die Windows momenteel
+kan vinden. Het rapport staat in Bureaublad\Computerdiagnose rapporten.
+
+
+39. Windows Tools zelftest
+--------------------------
+
+Bestand:
+pakket_zelftest.bat
+
+Controleert of alle BAT-bestanden vanuit het menu bereikbaar zijn, of de TXT- en
+PDF-handleiding aanwezig zijn en of de belangrijkste Windows-onderdelen bestaan.
+Voer deze zelftest uit nadat u het pakket hebt gekopieerd of uitgepakt.
+
+
+40. Windows-probleemoplossers openen
+-------------------------------------
+
+Bestand:
+open_probleemoplossers.bat
+
+Opent rechtstreeks de pagina Probleemoplossing in Windows-instellingen. Daar kunt
+u aanbevolen probleemoplossers en de beschikbare hulpmiddelen van Windows kiezen.
+Het BAT-bestand wijzigt zelf geen instellingen.
+
+
+41. Taakbeheer openen
+----------------------
+
+Bestand:
+open_taakbeheer.bat
+
+Opent Taakbeheer rechtstreeks. Hiermee kunt u actieve processen, prestaties,
+opstart-apps en gebruikers bekijken. Beëindig alleen een proces wanneer u weet
+welk programma of Windows-onderdeel erbij hoort.
+
+
+42. Windows-beveiliging openen
+-------------------------------
+
+Bestand:
+open_windows_beveiliging.bat
+
+Opent rechtstreeks de Windows-beveiligingsapp. Daar kunt u de actuele status van
+virus- en bedreigingsbeveiliging, firewall, apparaatbeveiliging en andere
+beveiligingsonderdelen bekijken. Het BAT-bestand start zelf geen scan en wijzigt
+geen instellingen.
+
+
+43. Netwerkverbindingen openen
+-------------------------------
+
+Bestand:
+open_netwerkverbindingen.bat
+
+Opent het klassieke Windows-overzicht van netwerkadapters. Dit is handig om de
+status van ethernet-, wifi- en virtuele adapters te bekijken. Schakel een adapter
+alleen uit of wijzig eigenschappen alleen wanneer u weet waarom.
+
+
+44. RDP Wrapper-diagnose
+-------------------------
+
+Bestanden:
+START_RDP_CONTROLE.cmd
+RDP_Diagnose_Windows11.ps1
+LEESMIJ_RDP.txt
+
+Controleert alleen-lezen de Remote Desktop Services-service, de verwijzing naar
+rdpwrap.dll, de ingestelde RDP-poort, Network Level Authentication, de lokale
+luisterstatus en bekende RDP Wrapper-bestanden. Als rdpwrap.ini wordt gevonden,
+wordt gecontroleerd of er een exacte sectie voor de aanwezige termsrv.dll-versie
+bestaat. Er wordt niets geïnstalleerd, gestart, gestopt, gedownload of gewijzigd.
+
+Gemaakt rapport:
+
+RDP_Rapport_COMPUTERNAAM_DATUM_TIJD.txt
+
+Het rapport wordt opgeslagen in Bureaublad\Computerdiagnose rapporten. Een
+passende INI-sectie of luisterende poort bewijst niet dat meerdere gelijktijdige
+RDP-sessies werkelijk werken. Test dat alleen handmatig met toestemming en met
+twee verschillende accounts. Zet RDP-poort 3389 nooit rechtstreeks open naar het
+internet; gebruik liever een beveiligde VPN of een beheerde toegangsmethode.
+
+
+Welke test past bij welk probleem?
+---------------------------------
+
+Computer is algemeen traag:
+
+1. Volledige computerdiagnose
+2. Opstartprogramma's controleren
+3. Broncontrole openen terwijl de vertraging optreedt
+
+Internet hapert:
+
+1. Netwerkstabiliteitstest
+2. Wifi-rapport bij een draadloze verbinding
+3. Vergelijk indien mogelijk met een netwerkkabel
+
+Computer loopt vast of start opnieuw:
+
+1. Betrouwbaarheidsgeschiedenis
+2. Windows-logboeken op het exacte tijdstip
+3. Volledige computerdiagnose
+4. Temperatuurcontrole en volledige geheugentest
+
+Schijf maakt geluid of bestanden geven fouten:
+
+1. Maak onmiddellijk een back-up
+2. Uitgebreide schijfcontrole
+3. Gebruik daarna eventueel het programma van de schijffabrikant
+
+Computer wordt heet of valt onder belasting uit:
+
+1. Temperatuur- en stresstesthandleiding
+2. Controleer ventilatoren en stof
+3. Test CPU en GPU afzonderlijk
+
+Laptopaccu loopt snel leeg:
+
+1. Laptopaccu en energiecontrole
+2. Vergelijk volle capaciteit met ontwerpcapaciteit
+3. Bekijk terugkerende fouten in het energierapport
+
+Een apparaat werkt niet:
+
+1. Volledige computerdiagnose
+2. Computerbeheer en Apparaatbeheer
+3. Handmatige hardwarechecklist
+
+RDP Wrapper of Extern bureaublad werkt niet:
+
+1. RDP Wrapper-diagnose
+2. Controleer de gemelde ServiceDll-, INI-, service- en poortstatus
+3. Open poort 3389 niet rechtstreeks naar het internet
+
+
+Aanbevolen testmomenten
+-----------------------
+
+- Eenmaal per maand: volledige computerdiagnose
+- Bij traag internet: netwerkstabiliteitstest en eventueel wifi-rapport
+- Na vastlopen: Betrouwbaarheidsgeschiedenis en Logboeken
+- Na nieuwe hardware of drivers: volledige diagnose en Apparaatbeheer
+- Bij hitte of lawaai: temperatuurcontrole en handmatige ventilatorcontrole
+- Bij vermoedelijke RAM-fouten: Windows Geheugendiagnose of MemTest86
+- Bij een oudere laptop: accu- en energiecontrole om de paar maanden
+- Voor een belangrijke wijziging: bewaar eerst een recente nulmeting
+
+
+Belangrijke beperkingen
+-----------------------
+
+- Korte CPU- en RAM-controles zijn geen langdurige stresstest
+- De GPU-controle bewijst alleen dat Windows de kaart en driver goed ziet
+- Audio, camera, toetsen, beeld en USB-poorten moeten handmatig worden getest
+- Windows geeft niet op iedere computer betrouwbare temperaturen door
+- SMART kan een defect voorspellen, maar niet ieder plotseling defect voorkomen
+- Een Windows-foutmelding kan door software, drivers of hardware worden veroorzaakt
+- RDP Wrapper is geen officieel ondersteunde meergebruikersoplossing voor Windows 11 Pro
+- Een RDP-diagnose bewijst niet dat twee gelijktijdige sessies echt functioneren
+- Een groene uitslag is een goede aanwijzing, geen volledige garantie
+
+
+Bij een probleem bewaren of noteren
+-----------------------------------
+
+- Het nieuwste Computer_test-rapport
+- Het DirectX-rapport bij beeld- of gameproblemen
+- Het schijf-, netwerk- of wifi-rapport dat bij het probleem past
+- Datum en exact tijdstip van de fout
+- Wat u op dat moment deed
+- Eventuele foutcode of blauwschermcode
+- Hoogste gemeten CPU- en GPU-temperatuur
+- Of de computer vastliep, opnieuw opstartte of volledig uitviel
+- De omschrijving uit de handmatige hardwarechecklist
+
+Met deze informatie is een probleem veel gerichter te onderzoeken.
+
+
+Maker
+-----
+
+Deze Windows Tools, alle 49 BAT-bestanden, de drie RDP-diagnosebestanden en deze
+handleiding zijn gemaakt door Marco Beenen.
+Versie 4.3 - 17 oktober 2026
